@@ -1,0 +1,254 @@
+@import "../../Styles/variables";
+@import "../../Styles/mixins";
+
+.projects-container {
+  min-height: 95vh;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  width: 100%;
+  margin: auto;
+  background: $whiteBgColor;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  &__headline {
+    @include site-headline;
+    z-index: 12;
+  }
+
+  &__type-selector {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    align-self: flex-start;
+    z-index: 12;
+    &__button {
+      color: $secondaryTextColor;
+      &:hover {
+        background: $secondaryBgColor;
+      }
+    }
+  }
+  &__projects {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.projects-container {
+  &__tile {
+    width: 40%;
+    aspect-ratio: 1/1;
+    position: relative;
+    display: flex;
+    z-index: 12;
+    &__overlay {
+      // That's the whole new tile that comes up on hover
+      width: 100%;
+      height: 100%;
+      background: $whiteBgColor;
+      position: absolute;
+      z-index: 99;
+      opacity: 0;
+      transition: opacity 0.5s;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      &:hover {
+        opacity: 90%;
+      }
+      &__thumbnail {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 0;
+      }
+      &__title {
+        text-align: center;
+        width: 100%;
+        flex: 1 0 100%;
+        color: $primaryTextColor;
+        @include underline;
+      }
+      &__desc {
+        text-align: center;
+        font-size: 1.1rem;
+        color: $primaryTextColor;
+        margin: 0 10px 0 10px;
+        line-height: 25px;
+      }
+      &__button {
+        border: 2px solid $secondaryBgColor;
+        color: $secondaryTextColor;
+        margin-right: 5px;
+        &:hover {
+          background: $secondaryBgColor;
+          color: $primaryTextColor;
+        }
+        &--purple {
+          background: $purpleBtnColor;
+          border: 2px solid $purpleBtnColor;
+          &:hover {
+            background: transparent;
+            border: 2px solid $purpleBtnColor;
+            color: $secondaryTextColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 400px)
+@media (max-width: 400px) {
+  .projects-container {
+    &__tile {
+      &__overlay {
+        &__title {
+          font-size: 1.2rem;
+        }
+        &__desc {
+          font-size: 1rem;
+          margin-top: 15px;
+        }
+        &__button {
+          font-size: 0.9rem;
+          &--purple {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and below)
+@media (max-width: 576px) {
+  .projects-container {
+    &__tile {
+      &__overlay {
+        &__button {
+          &--purple {
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and below)
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+    &__tile {
+      width: 80% !important;
+    }
+    &__projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and below)
+@media (max-width: 992px) {
+  .projects-container {
+    &__tile {
+      width: 50%;
+      &__overlay {
+        &__title {
+        }
+        &__desc {
+        }
+        &__button {
+          font-size: 0.9rem;
+          &--purple {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// X-Large devices (large desktops, 1200px and below)
+@media (max-width: 1200px) {
+  .projects-container {
+    &__tile {
+      &__overlay {
+        &__title {
+        }
+        &__desc {
+        }
+        &__button {
+          font-size: 0.9rem;
+          &--purple {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and above)
+@media (min-width: 1400px) {
+  .projects-container {
+    &__tile {
+      width: 30%;
+      &__overlay {
+        &__title {
+          font-size: 2.1rem;
+        }
+        &__desc {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+// Background blobs and animation
+
+.shape-blob {
+  --blob__height: 30vw;
+  background: #c812ed;
+  height: var(--blob__height);
+  width: var(--blob__height);
+  border-radius: 30% 50% 20% 40%;
+  animation: transform 30s ease-in-out infinite both alternate,
+    movement_two 30s ease-in-out infinite both;
+  opacity: 0.3;
+  position: absolute;
+
+  z-index: 11;
+  &.one {
+    left: -7vw;
+    top: -30px;
+    transform: rotate(-180deg);
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      opacity: 100%;
+    }
+  }
+
+  &.two {
+    z-index: 11;
+    height: calc(var(--blob__height) + 16vh);
+    width: calc(var(--blob__height) + 16vh);
+    right: -20vw;
+    top: 80px;
+    transform: rotate(-180deg);
+    animation: transform 30s ease-in-out infinite both alternate,
+      movement_one 40s ease-in-out infinite both;
+    z-index: 12;
+  }
+}

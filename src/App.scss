@@ -1,0 +1,116 @@
+@import "Components/Header/header";
+@import "Components/Footer/footer";
+@import "Components/ProjectDetail/projectDetail";
+@import "Pages/Home/home";
+@import "Styles/variables";
+@import "Pages/Projects/projects";
+@import "Pages/About/about";
+@import "Styles/animations";
+@import "Pages/Contact/contact";
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: $globalFontSize;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  background: #1a0044;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $secondaryTextColor;
+  &:visited {
+    color: $secondaryTextColor;
+  }
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+button {
+  transition: all 0.5s;
+  color: #fff;
+  background: transparent;
+  padding: 15px 35px 15px 35px;
+  margin-top: 50px;
+  border: 1px solid transparent;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+// Typography //
+
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+
+.selected {
+  background: #fb8500;
+}
+
+.nav-selected {
+  color: #fb8500 !important;
+}
+
+.hover {
+  opacity: 0.8;
+  backdrop-filter: blur(10px);
+}
+
+.unhovered {
+  opacity: 1;
+}
+
+.--bold {
+  font-weight: 600;
+}
+
+// ANIMATIONS //
+
+.fadeIn {
+  animation: 0.5s fadeIn forwards;
+}
+
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(-20px, 0);
+    opacity: 0;
+  }
+}

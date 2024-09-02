@@ -1,0 +1,31 @@
+@mixin site-headline {
+  // This is the whole site section title i.e 'About me'
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  height: auto;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: $headlineTextColor;
+  text-decoration: underline $secondaryBgColor;
+  text-underline-offset: 14px;
+  text-decoration-thickness: 5px;
+  // &:after {
+  //   background: $secondaryBgColor;
+  //   border-bottom: 10px solid #1a0044;
+  //   content: "";
+  //   height: 4px;
+  //   width: 100px;
+  //   line-height: 60px;
+  //   margin: auto;
+  //   display: block;
+  // }
+}
+
+@mixin underline {
+  // This is post title underline
+  text-decoration: underline $secondaryBgColor;
+  text-underline-offset: 14px;
+  text-decoration-thickness: 5px;
+}

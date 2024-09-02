@@ -1,0 +1,81 @@
+// Spin element that shows when projects are loading on the projects page
+.spinElement {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  &::after {
+    display: block;
+    text-align: center;
+    content: "";
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 9px solid rgb(231, 131, 16);
+    border-color: rgb(231, 131, 16) transparent rgb(231, 131, 16) transparent;
+    animation: rotateElement 1s linear infinite;
+  }
+}
+
+@keyframes rotateElement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Animated image border in about section
+@keyframes blob {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+//Background blob animation
+@keyframes transform {
+  0%,
+  100% {
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+  }
+  20% {
+    border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+  }
+  40% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+  }
+  60% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+  }
+}
+
+@keyframes movement_one {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translate(-30%, -10%) rotateY(10deg) scale(1.4);
+  }
+}
+
+@keyframes movement_two {
+  0%,
+  500% {
+    transform: none;
+  }
+  50% {
+    transform: translate(20%, 20%) rotate(-200deg) scale(1.2);
+  }
+}

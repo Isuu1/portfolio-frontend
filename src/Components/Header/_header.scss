@@ -1,0 +1,68 @@
+@import "../../Styles/variables";
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $headerBgColor;
+  color: $primaryTextColor;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  transition: all 0.5s;
+  max-height: 30px;
+  &__logo {
+    cursor: pointer;
+  }
+}
+.header__nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    &__item {
+      &__link {
+        transition: color 0.5s;
+        font-weight: 400;
+        &:hover {
+          color: $secondaryBgColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    &__nav {
+      &__list {
+        gap: 10px;
+      }
+    }
+    &__logo {
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
+}
