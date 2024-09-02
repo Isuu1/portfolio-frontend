@@ -5,11 +5,13 @@ export async function getProjects() {
   );
 
   if (!response.ok) {
-    throw {
-      message: "Failed to fetch data",
-      statusText: response.statusText,
-      status: response.status,
-    };
+    throw new Error(
+      JSON.stringify({
+        message: "Failed to fetch data",
+        statusText: response.statusText,
+        status: response.status,
+      })
+    );
   }
 
   const posts = await response.json();
@@ -22,11 +24,13 @@ export async function getProject(id) {
     `https://portfoliocms-kvrf.onrender.com/api/projects/${id}?populate=*`
   );
   if (!response.ok) {
-    throw {
-      message: "Failed to fetch data",
-      statusText: response.statusText,
-      status: response.status,
-    };
+    throw new Error(
+      JSON.stringify({
+        message: "Failed to fetch data",
+        statusText: response.statusText,
+        status: response.status,
+      })
+    );
   }
   const posts = await response.json();
   return posts;
