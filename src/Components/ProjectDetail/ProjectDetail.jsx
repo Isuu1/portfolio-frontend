@@ -50,7 +50,7 @@ const ProjectDetail = () => {
               exit="exit"
             >
               <img
-                src={`${project?.data?.attributes.image2.data.attributes.url}`}
+                src={`${project?.data?.attributes?.image2?.data.attributes.url}`}
                 className="project-detail-container__image__thumbnail"
                 alt=""
               />

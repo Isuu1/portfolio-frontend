@@ -4,9 +4,8 @@
 .projects-container {
   min-height: 95vh;
   display: flex;
-  // flex-wrap: wrap;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   margin: auto;
@@ -51,14 +50,14 @@
       height: 100%;
       background: $whiteBgColor;
       position: absolute;
+      top: 0;
+      left: 0;
       z-index: 99;
       opacity: 0;
       transition: opacity 0.5s;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-rows: 1fr 2fr 1fr;
+      justify-items: center;
       &:hover {
         opacity: 90%;
       }
@@ -69,14 +68,17 @@
         object-position: 50% 0;
       }
       &__title {
-        text-align: center;
         width: 100%;
-        flex: 1 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: $primaryTextColor;
         @include underline;
       }
       &__desc {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.1rem;
         color: $primaryTextColor;
         margin: 0 10px 0 10px;

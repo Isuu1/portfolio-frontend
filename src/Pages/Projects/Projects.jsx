@@ -59,15 +59,17 @@ const Projects = (props) => {
             <p className="projects-container__tile__overlay__desc">
               {item.attributes.shortDesc}
             </p>
-            <Link to={`/${item.id}`}>
-              <button className="projects-container__tile__overlay__button">
-                View more
-              </button>
-            </Link>
+            <div>
+              <Link to={`/${item.id}`}>
+                <button className="projects-container__tile__overlay__button">
+                  View more
+                </button>
+              </Link>
 
-            <button className="projects-container__tile__overlay__button--purple">
-              <a href={item?.attributes?.liveUrl}>Live site</a>
-            </button>
+              <button className="projects-container__tile__overlay__button--purple">
+                <a href={item?.attributes?.liveUrl}>Live site</a>
+              </button>
+            </div>
           </div>
           <img
             src={`${item.attributes.image.data[0].attributes.url}`}
