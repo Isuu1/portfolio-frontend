@@ -29,11 +29,6 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    // display: grid;
-    // grid-template-columns: repeat(
-    //   auto-fill,
-    //   minmax(400px, 1fr)
-    // ); /* Columns will fit the space */
     gap: 20px;
     padding: 0 1rem;
     align-items: center;
@@ -110,102 +105,6 @@
     }
   }
 }
-
-// // X-Small devices (portrait phones, less than 400px)
-// @media (max-width: 400px) {
-//   .projects-container {
-//     &__tile {
-//       &__overlay {
-//         &__title {
-//           font-size: 1.2rem;
-//         }
-//         &__desc {
-//           font-size: 1rem;
-//           margin-top: 15px;
-//         }
-//         &__button {
-//           font-size: 0.9rem;
-//           &--purple {
-//             font-size: 0.9rem;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// // Medium devices (tablets, 768px and below)
-// @media (max-width: 768px) {
-//   .projects-container {
-//     flex-direction: column;
-//     align-items: center;
-//     &__tile {
-//       // width: 80% !important;
-//     }
-//     &__projects {
-//       flex-direction: column;
-//       align-items: center;
-//     }
-//   }
-// }
-
-// // Large devices (desktops, 992px and below)
-// @media (max-width: 992px) {
-//   .projects-container {
-//     &__tile {
-//       // width: 50%;
-//       &__overlay {
-//         &__title {
-//         }
-//         &__desc {
-//         }
-//         &__button {
-//           font-size: 0.9rem;
-//           &--purple {
-//             font-size: 0.9rem;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// // X-Large devices (large desktops, 1200px and below)
-// @media (max-width: 1200px) {
-//   .projects-container {
-//     &__tile {
-//       &__overlay {
-//         &__title {
-//         }
-//         &__desc {
-//         }
-//         &__button {
-//           font-size: 0.9rem;
-//           &--purple {
-//             font-size: 0.9rem;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// // XX-Large devices (larger desktops, 1400px and above)
-// @media (min-width: 1400px) {
-//   .projects-container {
-//     &__tile {
-//       // width: 30%;
-//       &__overlay {
-//         &__title {
-//           font-size: 2.1rem;
-//         }
-//         &__desc {
-//           font-size: 1.4rem;
-//         }
-//       }
-//     }
-//   }
-// }
 
 // Background blobs and animation
 
