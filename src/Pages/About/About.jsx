@@ -8,10 +8,11 @@ import { ReactComponent as CSSIcon } from "../../images/css-icon.svg";
 import { ReactComponent as GithubIcon } from "../../images/github-icon.svg";
 import { ReactComponent as ReactIcon } from "../../images/react-icon.svg";
 import { ReactComponent as SassIcon } from "../../images/sass-icon.svg";
-import { ReactComponent as WordpressIcon } from "../../images/wordpress-icon.svg";
+import { ReactComponent as TypescriptIcon } from "../../images/typescript-icon.svg";
 import { ReactComponent as StrapiIcon } from "../../images/strapi-icon.svg";
 import { ReactComponent as NextJSIcon } from "../../images/nextjs-icon.svg";
 import { ReactComponent as SanityIcon } from "../../images/sanity-icon.svg";
+import { ReactComponent as HerokuIcon } from "../../images/heroku-icon.svg";
 
 //Animations
 import {
@@ -92,15 +93,20 @@ const About = (props) => {
         initial="hidden"
         variants={childDelayTopSpring}
       >
-        <h3 className="about-container__icons__headline">
-          My skills
-        </h3>
+        <h3 className="about-container__icons__headline">My stack</h3>
         <motion.div
           className="about-container__icons__icon"
           variants={iconsDelayAnimation}
         >
           <JSIcon style={{ width: "55px", height: "55px" }} />
           <p>Javascript</p>
+        </motion.div>
+        <motion.div
+          className="about-container__icons__icon"
+          variants={iconsDelayAnimation}
+        >
+          <TypescriptIcon style={{ width: "55px", height: "55px" }} />
+          <p>Typescript</p>
         </motion.div>
         <motion.div
           className="about-container__icons__icon"
@@ -164,8 +170,8 @@ const About = (props) => {
           className="about-container__icons__icon"
           variants={iconsDelayAnimation}
         >
-          <WordpressIcon style={{ width: "55px", height: "55px" }} />
-          <p>Wordpress</p>
+          <HerokuIcon style={{ width: "55px", height: "55px" }} />
+          <p>Heroku</p>
         </motion.div>
       </motion.div>
     </div>

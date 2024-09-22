@@ -171,13 +171,6 @@
   }
 }
 .projects-container {
-  min-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  margin: auto;
   background: #1a0044;
   z-index: 10;
   position: relative;
@@ -207,18 +200,26 @@
 }
 .projects-container__type-selector__button {
   color: #ffffff;
+  margin-top: 0;
 }
 .projects-container__type-selector__button:hover {
   background: #fb8500;
 }
 .projects-container__projects {
-  display: flex;
+  box-sizing: border-box;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 1rem;
+  align-items: center;
   justify-content: center;
 }
 
 .projects-container__tile {
-  width: 40%;
+  flex: 1 1;
+  min-width: 350px;
+  max-width: 500px;
   aspect-ratio: 1/1;
   position: relative;
   display: flex;
@@ -288,64 +289,6 @@
   color: #ffffff;
 }
 
-@media (max-width: 400px) {
-  .projects-container__tile__overlay__title {
-    font-size: 1.2rem;
-  }
-  .projects-container__tile__overlay__desc {
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-  .projects-container__tile__overlay__button {
-    font-size: 0.9rem;
-  }
-  .projects-container__tile__overlay__button--purple {
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .projects-container__tile {
-    width: 80% !important;
-  }
-  .projects-container__projects {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 992px) {
-  .projects-container__tile {
-    width: 50%;
-  }
-  .projects-container__tile__overlay__button {
-    font-size: 0.9rem;
-  }
-  .projects-container__tile__overlay__button--purple {
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 1200px) {
-  .projects-container__tile__overlay__button {
-    font-size: 0.9rem;
-  }
-  .projects-container__tile__overlay__button--purple {
-    font-size: 0.9rem;
-  }
-}
-@media (min-width: 1400px) {
-  .projects-container__tile {
-    width: 30%;
-  }
-  .projects-container__tile__overlay__title {
-    font-size: 2.1rem;
-  }
-  .projects-container__tile__overlay__desc {
-    font-size: 1.4rem;
-  }
-}
 .shape-blob {
   --blob__height: 30vw;
   background: #c812ed;

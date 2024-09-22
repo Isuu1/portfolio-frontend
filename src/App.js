@@ -15,7 +15,7 @@ import {
 } from "react-router-dom";
 import ProjectDetail, {
   loader as projectDetailLoader,
-} from "./Components/ProjectDetail/ProjectDetail";
+} from "./Pages/ProjectDetail/ProjectDetail";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import { useRef } from "react";

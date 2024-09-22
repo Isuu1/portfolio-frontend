@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { getProject } from "../../api";
-import ReactMarkdown from "react-markdown";
+import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 //Back button icon
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
@@ -91,9 +92,9 @@ const ProjectDetail = () => {
                   className="project-detail-container__data__desc"
                   variants={slideInBottom}
                 >
-                  <ReactMarkdown
-                    children={project?.data?.attributes.desc}
-                  />
+                  <Markdown rehypePlugins={[rehypeRaw]}>
+                    {project?.data?.attributes?.desc}
+                  </Markdown>
                 </motion.div>
                 <motion.button
                   className="projects-container__tile__overlay__button--purple"
