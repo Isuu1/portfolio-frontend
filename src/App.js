@@ -7,11 +7,11 @@ import Projects, {
 } from "./Pages/Projects/Projects";
 import ScrollToAnchor from "./Components/ScrollToAnchor";
 import {
-  Navigate,
-  Route,
+  // Navigate,
+  // Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
+  // createRoutesFromElements,
 } from "react-router-dom";
 import ProjectDetail, {
   loader as projectDetailLoader,
@@ -25,40 +25,69 @@ import NotFound from "./Components/NotFound/NotFound";
 function App() {
   const projectsRef = useRef(null);
 
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
-        <Route exact path="/" errorElement={<Error />} />
-        <Route
-          loader={projectsLoader}
-          index
-          element={
-            <>
-              <ScrollToAnchor />
-              <Header projectsRef={projectsRef} />
-              <Home />
-              <Projects projectsRef={projectsRef} />
-              <About />
-              <Contact />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path=":id"
-          errorElement={<Error />}
-          loader={projectDetailLoader}
-          element={<ProjectDetail />}
-        />
-        <Route path="/404" element={<NotFound />} />
-        <Route path="*" element={<Navigate to="/404" />} />
-      </Route>
-    )
-  );
+  const router1 = createBrowserRouter([
+    {
+      path: "/",
+      errorElement: <Error />,
+      loader: projectsLoader,
+      element: (
+        <>
+          <ScrollToAnchor />
+          <Header projectsRef={projectsRef} />
+          <Home />
+          <Projects projectsRef={projectsRef} />
+          <About />
+          <Contact />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/:id",
+      errorElement: <Error />,
+      loader: projectDetailLoader,
+      element: <ProjectDetail />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
+
+  // const router = createBrowserRouter(
+  //   createRoutesFromElements(
+  //     <Route>
+  //       <Route exact path="/" errorElement={<Error />} />
+  //       <Route
+  //         loader={projectsLoader}
+  //         index
+  //         element={
+  //           <>
+  //             <ScrollToAnchor />
+  //             <Header projectsRef={projectsRef} />
+  //             <Home />
+  //             <Projects projectsRef={projectsRef} />
+  //             <About />
+  //             <Contact />
+  //             <Footer />
+  //           </>
+  //         }
+  //       />
+  //       <Route
+  //         path=":id"
+  //         errorElement={<Error />}
+  //         loader={projectDetailLoader}
+  //         element={<ProjectDetail />}
+  //       />
+  //       <Route path="/404" element={<NotFound />} />
+  //       <Route path="*" element={<Navigate to="/404" />} />
+  //     </Route>
+  //   )
+  // );
 
   return (
     <div className="App">
-      <RouterProvider router={router} />
+      <RouterProvider router={router1} />
     </div>
   );
 }

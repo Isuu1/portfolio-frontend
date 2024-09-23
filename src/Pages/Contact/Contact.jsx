@@ -3,13 +3,16 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 //Icons
-import EmailIcon from "@mui/icons-material/Email";
-import SendIcon from "@mui/icons-material/Send";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+// import EmailIcon from "@mui/icons-material/Email";
+// import SendIcon from "@mui/icons-material/Send";
+// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { ReactComponent as TweeterIcon } from "../../images/social/twitter2-icon.svg";
 import { ReactComponent as FbIcon } from "../../images/social/fb2-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/social/instagram2-icon.svg";
 import { ReactComponent as CodepenIcon } from "../../images/social/codepen.svg";
+import { IoSend } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa";
 
 //Animations
 import {
@@ -107,7 +110,7 @@ const Contact = () => {
           variants={opacityAnimation}
         >
           Send
-          <SendIcon />
+          <IoSend className="icon" />
         </motion.button>
         {formSent ? (
           <motion.div
@@ -148,7 +151,7 @@ const Contact = () => {
           className="contact-container__contact-details__info"
           variants={opacityAnimation}
         >
-          <EmailIcon />
+          <MdEmail className="icon" />
           Email:{" "}
           <span className="--bold">jakub.babelek@gmail.com</span>
         </motion.p>
@@ -156,7 +159,7 @@ const Contact = () => {
           className="contact-container__contact-details__info"
           variants={opacityAnimation}
         >
-          <LocalPhoneIcon />
+          <FaPhone className="icon" />
           Phone: <span className="--bold">+44 079 2889 2470</span>
         </motion.p>
         <motion.div

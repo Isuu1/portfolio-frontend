@@ -67,7 +67,7 @@
   z-index: 97;
 }
 .project-detail-container__image {
-  width: 60%;
+  width: 50%;
   height: auto;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
@@ -143,6 +143,7 @@
   border: 1px solid #fb8500;
   color: #fb8500;
   display: flex;
+  gap: 10px;
   align-items: center;
 }
 .home-container__headline__button:hover {
@@ -747,6 +748,10 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
+}
+
+.icon {
+  font-size: 1.3rem;
 }
 
 .selected {

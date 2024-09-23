@@ -23,6 +23,7 @@
     border: 1px solid $secondaryBgColor;
     color: #fb8500;
     display: flex;
+    gap: 10px;
     align-items: center;
     &:hover {
       background: $secondaryBgColor;

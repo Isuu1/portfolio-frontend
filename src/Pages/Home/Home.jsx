@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import { TbArrowBigDownLineFilled } from "react-icons/tb";
+
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
@@ -159,9 +160,7 @@ const Home = () => {
         <a href="#projects-container">
           <button className="home-container__headline__button">
             My work
-            <KeyboardDoubleArrowDownIcon
-              sx={{ fontSize: "30px", marginLeft: "5px" }}
-            />
+            <TbArrowBigDownLineFilled className="icon" />
           </button>
         </a>
       </div>

@@ -3,10 +3,9 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { getProject } from "../../api";
 import Markdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
 
 //Back button icon
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { FaArrowLeft } from "react-icons/fa";
 
 //Animations
 import {
@@ -65,9 +64,8 @@ const ProjectDetail = () => {
                 exit="exit"
               >
                 <motion.div variants={slideInBottom}>
-                  <KeyboardBackspaceIcon
-                    sx={{ fontSize: "50px" }}
-                    className="project-detail-container__data__back-button"
+                  <FaArrowLeft
+                    className="icon project-detail-container__data__back-button"
                     onClick={() => {
                       setIsVisible(false);
                       setTimeout(() => {
@@ -92,7 +90,7 @@ const ProjectDetail = () => {
                   className="project-detail-container__data__desc"
                   variants={slideInBottom}
                 >
-                  <Markdown rehypePlugins={[rehypeRaw]}>
+                  <Markdown>
                     {project?.data?.attributes?.desc}
                   </Markdown>
                 </motion.div>
