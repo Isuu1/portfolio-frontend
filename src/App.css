@@ -79,6 +79,7 @@
 .project-detail-container__image__thumbnail {
   width: 100%;
   min-height: 100%;
+  min-width: 630px;
 }
 .project-detail-container__data {
   width: 40%;
@@ -105,6 +106,11 @@
   cursor: pointer;
 }
 
+@media (max-width: 600px) {
+  .project-detail-container__image__thumbnail {
+    min-width: 400px;
+  }
+}
 @media (max-width: 768px) {
   .project-detail-container {
     overflow: scroll;
