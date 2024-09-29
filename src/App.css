@@ -145,16 +145,32 @@
   flex-direction: column;
   align-items: center;
 }
-.home-container__headline__button {
-  border: 1px solid #fb8500;
+.home-container__headline__buttons {
+  display: flex;
+  gap: 20px;
+}
+.home-container__headline__buttons__my-work {
+  border: 2px solid #fb8500;
   color: #fb8500;
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.home-container__headline__button:hover {
+.home-container__headline__buttons__my-work:hover {
   background: #fb8500;
-  border: 1px solid #fb8500;
+  border: 2px solid #fb8500;
+  color: #fff;
+}
+.home-container__headline__buttons__github {
+  background: #811ae5;
+  border: 2px solid transparent;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.home-container__headline__buttons__github:hover {
+  background: transparent;
+  border: 2px solid #811ae5;
   color: #fff;
 }
 .home-container__headline__text {
