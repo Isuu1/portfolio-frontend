@@ -158,10 +158,7 @@ const Contact = () => {
         <motion.p
           className="contact-container__contact-details__info"
           variants={opacityAnimation}
-        >
-          <FaPhone className="icon" />
-          Phone: <span className="--bold">+44 079 2889 2470</span>
-        </motion.p>
+        ></motion.p>
         <motion.div
           className="contact-container__contact-details__socials"
           variants={childDelayTopSpring}
@@ -195,17 +192,6 @@ const Contact = () => {
               target="blank"
             >
               <FbIcon style={{ width: "30px" }} />
-            </a>
-          </motion.i>
-          <motion.i
-            className="contact-container__contact-details__socials__icon"
-            variants={opacityAnimation}
-          >
-            <a
-              href="https://www.instagram.com/isuususu/"
-              target="blank"
-            >
-              <InstagramIcon style={{ width: "30px" }} />
             </a>
           </motion.i>
         </motion.div>

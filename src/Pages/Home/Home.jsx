@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { TbArrowBigDownLineFilled } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa";
 
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
@@ -157,12 +158,21 @@ const Home = () => {
             style={{ color: "#811ae5", fontWeight: "bold" }}
           />
         </h2>
-        <a href="#projects-container">
-          <button className="home-container__headline__button">
-            My work
-            <TbArrowBigDownLineFilled className="icon" />
-          </button>
-        </a>
+
+        <div className="home-container__headline__buttons">
+          <a href="#projects-container">
+            <button className="home-container__headline__buttons__my-work">
+              My work
+              <TbArrowBigDownLineFilled className="icon" />
+            </button>
+          </a>
+          <a href="https://github.com/Isuu1">
+            <button className="home-container__headline__buttons__github">
+              GitHub
+              <FaGithub className="icon" />
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );

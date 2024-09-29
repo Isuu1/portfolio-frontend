@@ -19,16 +19,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__button {
-    border: 1px solid $secondaryBgColor;
-    color: #fb8500;
+  &__buttons {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    &:hover {
-      background: $secondaryBgColor;
-      border: 1px solid $secondaryBgColor;
-      color: #fff;
+    gap: 20px;
+    &__my-work {
+      border: 2px solid $secondaryBgColor;
+      color: #fb8500;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &:hover {
+        background: $secondaryBgColor;
+        border: 2px solid $secondaryBgColor;
+        color: #fff;
+      }
+    }
+    &__github {
+      background: #811ae5;
+      border: 2px solid transparent;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &:hover {
+        background: transparent;
+        border: 2px solid #811ae5;
+        color: #fff;
+      }
     }
   }
   &__text {
