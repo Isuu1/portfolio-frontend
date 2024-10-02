@@ -83,9 +83,15 @@
 }
 .project-detail-container__data {
   width: 40%;
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
   margin-top: 30px;
   line-height: 28px;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.project-detail-container__data::-webkit-scrollbar {
+  display: none;
 }
 .project-detail-container__data__tags {
   color: #933ee7;
@@ -96,6 +102,13 @@
 }
 .project-detail-container__data__desc {
   margin-top: 20px;
+  white-space: pre-wrap;
+}
+.project-detail-container__data__desc ul {
+  line-height: 1rem;
+}
+.project-detail-container__data__desc ul li {
+  margin-left: 1rem;
 }
 .project-detail-container__data__back-button {
   color: #fff;

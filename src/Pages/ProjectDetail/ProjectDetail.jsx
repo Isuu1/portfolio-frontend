@@ -27,6 +27,8 @@ const ProjectDetail = () => {
 
   const [isVisible, setIsVisible] = useState(true);
 
+  console.log(project?.data?.attributes?.desc);
+
   return (
     <AnimatePresence mode="wait">
       {isVisible && (
@@ -90,7 +92,7 @@ const ProjectDetail = () => {
                   className="project-detail-container__data__desc"
                   variants={slideInBottom}
                 >
-                  <Markdown>
+                  <Markdown breaks>
                     {project?.data?.attributes?.desc}
                   </Markdown>
                 </motion.div>

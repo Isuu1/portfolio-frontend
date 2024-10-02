@@ -32,9 +32,15 @@
   }
   &__data {
     width: 40%;
-    padding: 20px;
+    padding: 20px 20px 100px 20px;
     margin-top: 30px;
     line-height: 28px;
+    overflow: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &__tags {
       color: #933ee7;
       font-size: 1.3rem;
@@ -44,6 +50,13 @@
     }
     &__desc {
       margin-top: 20px;
+      white-space: pre-wrap;
+      & ul {
+        line-height: 1rem;
+        & li {
+          margin-left: 1rem;
+        }
+      }
     }
     &__back-button {
       color: $primaryTextColor;
