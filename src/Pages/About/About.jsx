@@ -61,23 +61,22 @@ const About = (props) => {
             className="about-container__data__desc"
             variants={slideInBottom}
           >
-            Hi there! I'm Jacob, a passionate and creative web
-            developer with a knack for turning ideas into visually
-            appealing and functional websites. I thrive on challenges
-            and love bringing web projects to life with code.
+            Hi, I'm Jakub, an aspiring Full-Stack Software Engineer
+            with a deep passion for technology and coding.
           </motion.p>
           <motion.p
             className="about-container__data__desc"
             variants={slideInBottom}
           >
-            When I'm not immersed in code, I enjoy exploring new
-            places on my bike trips and playing online games with my
-            friends. Yet, it's within the realm of coding where my
-            passion truly ignites. I thrive on the challenge of
-            mastering new technologies and seamlessly integrating them
-            into my projects. With an unwavering commitment to
-            perfection, I meticulously refine every detail, ensuring
-            each project reaches its full potential.
+            I transitioned into this field because I thrive on
+            constant learning, solving real-world problems, and
+            embracing new challenges. I'm currently mastering Next.js
+            and TypeScript, driven by the excitement of building
+            dynamic, user-focused applications. My background has
+            given me strong problem-solving and organisational skills,
+            which I love applying to complex coding challenges. When
+            I'm not immersed in code, you can usually find me out on a
+            bike trip, recharging for the next big project.
             <motion.p
               className="about-container__data__desc"
               variants={slideInBottom}
