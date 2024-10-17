@@ -39,7 +39,7 @@
       color: $secondaryTextColor;
       outline: none;
       border: 0;
-      transition: all 0.3s;
+      transition: filter 0.3s;
       &:focus {
         filter: drop-shadow(0 0 0.75rem rgb(62, 15, 173));
       }
@@ -54,7 +54,7 @@
       outline: none;
       border: 0;
       padding: 15px;
-      transition: all 0.3s;
+      transition: filter 0.3s;
       &:focus {
         filter: drop-shadow(0 0 0.75rem rgb(62, 15, 173));
       }
@@ -74,7 +74,7 @@
       border-width: 4px;
       border-style: solid;
       border-image: linear-gradient(to left, #743ad5, #d53a9d) 1;
-
+      transition: background 0.3s;
       &:hover {
         background: linear-gradient(to left, #743ad5, #d53a9d);
       }
@@ -112,7 +112,7 @@
         padding: 10px;
         border-radius: 180px;
         animation: btnGradient 2s linear infinite;
-        transition: all 200ms;
+        transition: filter 0.3s;
         &:hover {
           filter: drop-shadow(0 0 0.75rem rgb(62, 15, 173));
           & svg {
