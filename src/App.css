@@ -237,6 +237,7 @@
 .projects-container__type-selector__button {
   color: #ffffff;
   margin-top: 0;
+  transition: background 0.3s;
 }
 .projects-container__type-selector__button:hover {
   background: #fb8500;

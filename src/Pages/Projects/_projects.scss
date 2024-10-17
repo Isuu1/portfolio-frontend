@@ -19,6 +19,7 @@
     &__button {
       color: $secondaryTextColor;
       margin-top: 0;
+      transition: background 0.3s;
       &:hover {
         background: $secondaryBgColor;
       }
