@@ -19,12 +19,7 @@ export const headlineSpringAnimation = {
     scale: 1,
     opacity: 1,
     transition: {
-      type: "spring",
-      bounce: 0.2,
-      damping: 10,
-      mass: 0.75,
-      stiffness: 100,
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   hidden: {
@@ -36,9 +31,15 @@ export const headlineSpringAnimation = {
 export const iconsDelayAnimation = {
   visible: {
     opacity: 1,
+    transform: "translateY(0px)", // Adding transform for smoother rendering
   },
   hidden: {
     opacity: 0,
+    transform: "translateY(20px)", // Starting with an offset
+  },
+  transition: {
+    type: "spring", // Spring animation for smoother motion
+    stiffness: 100,
   },
 };
 

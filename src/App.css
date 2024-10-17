@@ -454,7 +454,7 @@
   align-items: center;
   flex-direction: column;
   gap: 5px;
-  transition: all 0.5s;
+  transition: filter 0.3s ease; /* Apply transition only to filter on hover */
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
