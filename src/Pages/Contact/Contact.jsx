@@ -3,16 +3,11 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 //Icons
-// import EmailIcon from "@mui/icons-material/Email";
-// import SendIcon from "@mui/icons-material/Send";
-// import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { ReactComponent as TweeterIcon } from "../../images/social/twitter2-icon.svg";
-import { ReactComponent as FbIcon } from "../../images/social/fb2-icon.svg";
-import { ReactComponent as InstagramIcon } from "../../images/social/instagram2-icon.svg";
+import { ReactComponent as GithubIcon } from "../../images/social/github-icon.svg";
+import { ReactComponent as LinkedinIcon } from "../../images/social/linkedin-icon.svg";
 import { ReactComponent as CodepenIcon } from "../../images/social/codepen.svg";
 import { IoSend } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
 
 //Animations
 import {
@@ -177,10 +172,8 @@ const Contact = () => {
             className="contact-container__contact-details__socials__icon"
             variants={opacityAnimation}
           >
-            <a href="https://twitter.com/Isuususu1" target="blank">
-              <TweeterIcon
-                style={{ width: "30px", height: "32px" }}
-              />
+            <a href="https://github.com/Isuu1" target="blank">
+              <GithubIcon style={{ width: "30px", height: "30px" }} />
             </a>
           </motion.i>
           <motion.i
@@ -188,10 +181,12 @@ const Contact = () => {
             variants={opacityAnimation}
           >
             <a
-              href="https://www.facebook.com/jakub.babelek/"
+              href="https://www.linkedin.com/in/jakub-babelek/"
               target="blank"
             >
-              <FbIcon style={{ width: "30px" }} />
+              <LinkedinIcon
+                style={{ width: "30px", height: "30px" }}
+              />
             </a>
           </motion.i>
         </motion.div>
